@@ -30,5 +30,7 @@ public class MapMatch {
     public static void serverStarting(FMLServerStartingEvent event) {
         event.registerServerCommand(new ExportMap());
         event.registerServerCommand(new BuildCube());
+        event.registerServerCommand(new BuildHouse());
+        event.registerServerCommand(new BuildHouse_Coord());
     }
 }
