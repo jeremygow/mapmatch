@@ -1,4 +1,4 @@
-package qmul_gameai;
+package qmul_gameai.gdmc;
 
 import java.util.ArrayList;
 import java.util.List;
