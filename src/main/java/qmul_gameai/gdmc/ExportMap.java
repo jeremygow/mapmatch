@@ -1,4 +1,4 @@
-package qmul_gameai;
+package qmul_gameai.gdmc;
 
 import net.minecraft.command.*;
 import net.minecraft.block.Block;
@@ -29,14 +29,7 @@ public class ExportMap implements ICommand {
 
     private final List aliases;
 
-    public static String AIR = "Air";
-    public static String WATER = "Water";
-    public static String FLOWER = "Flower";
-    public static String GRASS = "Grass";
-    public static String LEAVES = "Leaves";
-    public static String PLANT = "Plant";
-    public static String MUSHROOM = "Mushroom";
-    public static String WOOD = "Wood";
+
 
 
     public ExportMap() {
@@ -99,15 +92,10 @@ public class ExportMap implements ICommand {
 
     public void export(Writer writer, World world, int x1, int z1, int dx, int dz) throws IOException {
 
-        List<String> ignore = new ArrayList<String>();
-        ignore.add(FLOWER);
-        ignore.add(GRASS);
-        ignore.add(LEAVES);
-        ignore.add(PLANT);
-        ignore.add(MUSHROOM);
-        ignore.add(WOOD);
+        List<String> ignore = Blocks.ignoreBlocks();
+        List<String> terrainTypes = Blocks.terrainBlocks();
 
-        Set<String> terrainTypes = new HashSet<String>();
+        Set<String> newTerrainTypes = new HashSet<String>();
 
         writer.write("x, z, height, water, top, terrain\n");
 
@@ -125,16 +113,20 @@ public class ExportMap implements ICommand {
                     Block block = state.getBlock();
                     String name = block.getLocalizedName();
 
-                    if (!name.equals(AIR)) {
+                    if (!name.equals(Blocks.AIR)) {
                         if (ignore.contains(name)) {
                             if (top == null) {
                                 top = name;
                             }
                         } else {
                             terrain = name;
-                            terrainTypes.add(name);
-                            water = name.equals(WATER);
+                            water = name.equals(Blocks.WATER);
                             height = y;
+
+                            if (!water && !terrainTypes.contains(name)) {
+                                newTerrainTypes.add(name);
+                            }
+
                             break;
                         }
                     }
@@ -150,7 +142,7 @@ public class ExportMap implements ICommand {
             }
         }
 
-        System.out.println("Terrain: " + terrainTypes.toString());
+        System.out.println("New terrain: " + newTerrainTypes.toString());
     }
 
 

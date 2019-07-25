@@ -1,4 +1,4 @@
-package qmul_gameai;
+package qmul_gameai.gdmc;
 
 import net.minecraft.command.*;
 import net.minecraft.block.Block;

@@ -1,4 +1,4 @@
-package qmul_gameai;
+package qmul_gameai.gdmc;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
