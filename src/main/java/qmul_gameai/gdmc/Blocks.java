@@ -48,6 +48,9 @@ public class Blocks {
         ignore.add(PUMPKIN);
         ignore.add(SUGAR_CANE);
         ignore.add(VINES);
+        ignore.add(LILY);
+        ignore.add(WOODEN_PLANKS);
+        ignore.add(SPRUCE_STAIRS);
         return ignore;
     }
 
