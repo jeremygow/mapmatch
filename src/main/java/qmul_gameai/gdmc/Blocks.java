@@ -18,6 +18,9 @@ public class Blocks {
     public final static String PUMPKIN = "Pumpkin";
     public final static String SUGAR_CANE = "Sugar cane";
     public final static String VINES = "Vines";
+    public final static String LILY = "Lily Pad";
+    public final static String WOODEN_PLANKS = "Wooden Planks";
+    public final static String SPRUCE_STAIRS = "Spruce Wood Stairs";
 
     // Terrain blocks
     public final static String LAVA = "Lava";
