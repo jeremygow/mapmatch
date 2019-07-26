@@ -27,10 +27,15 @@ import java.util.*;
  */
 public class ExportMap implements ICommand {
 
+    public final static String CSV_SEP = ",";
+    public final static int CSV_X = 0;
+    public final static int CSV_Z = 1;
+    public final static int CSV_HEIGHT = 2;
+    public final static int CSV_WATER = 3;
+    public final static int CSV_TOP = 4;
+    public final static int CSV_TERRAIN = 5;
+
     private final List aliases;
-
-
-
 
     public ExportMap() {
         aliases = new ArrayList();
@@ -132,12 +137,12 @@ public class ExportMap implements ICommand {
                     }
                 }
 
-                writer.write(x + ", ");
-                writer.write(z + ", ");
+                writer.write(x + CSV_SEP);
+                writer.write(z + CSV_SEP);
 
-                writer.write(height + ", ");
-                writer.write(water + ", ");
-                writer.write(top + ", ");
+                writer.write(height + CSV_SEP);
+                writer.write(water + CSV_SEP);
+                writer.write(top + CSV_SEP);
                 writer.write(terrain + "\n");
             }
         }
