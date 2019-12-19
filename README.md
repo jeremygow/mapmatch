@@ -1,5 +1,6 @@
 # mapmatch
 
+Install gradle
 Setting up as a Forge mod: https://mcforge.readthedocs.io/en/latest/gettingstarted/
 
  
