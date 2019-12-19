@@ -14,6 +14,15 @@ gradlew runServer
 gradlew runClient
 ```
 This starts up Minecraft. You should be able to see "mapmatch" as a mod. Activate it.
+You can now use the commands that are part of the mod. Try the following within Minecraft:
+* press t to open console
+* /house2 GOLD_BLOCK 10 10 10
+
+This will create a house from gold blocks in front of your face
+
+To add new commands:
+* copy an existing command (e.g. BuildHouse) in the java src folder and modify
+* register the new command in "MapMatch.java"
 
 ## Some Links
 * Setting up as a Forge mod: https://mcforge.readthedocs.io/en/latest/gettingstarted/
