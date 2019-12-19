@@ -25,7 +25,7 @@ To add new commands:
 * register the new command in "MapMatch.java"
 
 ## Some Links
-* Setting up as a Forge mod: https://mcforge.readthedocs.io/en/latest/gettingstarted/
+Setting up as a Forge mod: https://mcforge.readthedocs.io/en/latest/gettingstarted/
 
  
 Overview of LiDAR datasets: https://en.wikipedia.org/wiki/National_Lidar_Dataset_(United_States)
