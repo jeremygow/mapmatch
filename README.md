@@ -1,10 +1,22 @@
 # mapmatch
 
-Install gradle
+## Installation
+
+* Install gradle
+* Download mcforge mod for Minecraft 12.2 https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html
+* Clone this repo
+* Copy the following files from mcforge to repo folder: build.gradle, gradlew.bat, gradlew, the gradle folder
+
 ```
-gradle wrapper --gradle-version {gradle version}
+gradlew runServer
 ```
-Setting up as a Forge mod: https://mcforge.readthedocs.io/en/latest/gettingstarted/
+```
+gradlew runClient
+```
+This starts up Minecraft. You should be able to see "mapmatch" as a mod. Activate it.
+
+## Some Links
+* Setting up as a Forge mod: https://mcforge.readthedocs.io/en/latest/gettingstarted/
 
  
 Overview of LiDAR datasets: https://en.wikipedia.org/wiki/National_Lidar_Dataset_(United_States)
