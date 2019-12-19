@@ -3,7 +3,7 @@
 ## Installation
 
 * Install gradle
-* Download mcforge mod for Minecraft 12.2 https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html
+* Download mcforge mod MDK for Minecraft 12.2 https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html
 * Clone this repo
 * Copy the following files from mcforge to repo folder: build.gradle, gradlew.bat, gradlew, the gradle folder
 
